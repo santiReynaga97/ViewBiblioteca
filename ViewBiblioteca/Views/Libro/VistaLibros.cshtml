@@ -1,0 +1,38 @@
+﻿@model  List<Entidad.Libro>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>id Autor</th>
+            <th>id Categoria</th>
+            <th>id tipo de libro</th>
+            <th>Cantidad Paginas</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var u in Model)
+        {
+            <tr>
+               
+                <td>@u.Id</td>
+                <td>@u.Nombre</td>
+                <td>@u.Descripcion</td>
+                <td>@u.IdAutor</td>
+                <td>@u.IdCategoria</td>
+                <td>@u.IdTipoLibro</td>
+                <td>@u.CantidadPaginas</td>
+                
+                <td><a href="~/Libro/ActualizarLibro/@u.Id" class="btn btn-primary" role="button">Editar</a></td>
+                <td><a title="Eliminar" onclick="return confirm('¿Esta seguro?');" href="~/Libro/EliminarLibro/@u.Id" class="btn btn-danger" >Eliminar</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

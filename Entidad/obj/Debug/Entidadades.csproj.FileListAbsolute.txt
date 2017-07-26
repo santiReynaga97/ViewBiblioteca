@@ -1,0 +1,5 @@
+c:\users\santiago reynaga\documents\visual studio 2017\Projects\ViewBiblioteca\Entidad\bin\Debug\Entidad.dll
+c:\users\santiago reynaga\documents\visual studio 2017\Projects\ViewBiblioteca\Entidad\bin\Debug\Entidad.pdb
+c:\users\santiago reynaga\documents\visual studio 2017\Projects\ViewBiblioteca\Entidad\obj\Debug\Entidadades.csprojResolveAssemblyReference.cache
+c:\users\santiago reynaga\documents\visual studio 2017\Projects\ViewBiblioteca\Entidad\obj\Debug\Entidad.dll
+c:\users\santiago reynaga\documents\visual studio 2017\Projects\ViewBiblioteca\Entidad\obj\Debug\Entidad.pdb

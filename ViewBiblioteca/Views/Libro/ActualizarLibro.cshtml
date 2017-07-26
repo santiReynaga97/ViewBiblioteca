@@ -1,0 +1,74 @@
+﻿@model Entidad.Libro
+    <h1 colspan="2" align="center">Actualizar Libro</h1>
+    <div> 
+        @using (Html.BeginForm("ActualizarLibro", "Libro", FormMethod.Post))
+        {
+            
+            @Html.HiddenFor(m=>m.Id)
+            <table class="table table-striped">
+               
+                <tr>
+                    <td>Nombre : </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Nombre)
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Descripcion: </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Descripcion)
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Autor : </td>
+                    <td>
+                        @Html.DropDownListFor(m => m.IdAutor, new List<SelectListItem>
+                   { new SelectListItem{Text="Dieguito Maradona", Value="1"},
+                     new SelectListItem{Text="Gaston Ramirez", Value="2"},
+                     new SelectListItem{Text="Homero Simpson",Value="3", } }, "Please select")
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Catetegoria : </td>
+                    <td>
+                        @Html.DropDownListFor(m => m.IdCategoria, new List<SelectListItem>
+                   { new SelectListItem{Text="Terror", Value="1"},
+                     new SelectListItem{Text="Comedia", Value="2"},
+                     new SelectListItem{Text="Romance",Value="3", } }, "Please select")
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Año de Publicacion: </td>
+                    <td>
+                        @Html.TextBoxFor(x => x.AnioPublicacion, "{0:dd-MM-yyyy}", new { @class = "dateInput", @placeholder = "plz input date" })
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tipo de Libro : </td>
+                    <td>
+                        @Html.DropDownListFor(m => m.IdTipoLibro, new List<SelectListItem>
+                   { new SelectListItem{Text="Historieta", Value="1"},
+                     new SelectListItem{Text="Manual", Value="2"},
+                     new SelectListItem{Text="Novela",Value="3", } }, "Please select")
+
+                    </td>
+                <tr>
+                    <td>Cantida de Paginas: </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.CantidadPaginas)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit" class="btn btn-primary" /></td>
+                </tr>
+            </table>
+        }
+
+    </div>
+
