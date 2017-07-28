@@ -28,6 +28,7 @@ namespace Modelos
                     sql.Parameters.AddWithValue("@pIdCat", objLibro.IdCategoria);
                     sql.Parameters.AddWithValue("@pAnioP", objLibro.AnioPublicacion);
                     sql.Parameters.AddWithValue("@pIdTip", objLibro.IdTipoLibro);
+		    //holaaa sadas
                     sql.Parameters.AddWithValue("@pCant", objLibro.CantidadPaginas);
                     Conection.conn.Open();
                     sql.ExecuteNonQuery();                
